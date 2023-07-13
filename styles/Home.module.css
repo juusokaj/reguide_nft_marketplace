@@ -33,6 +33,8 @@
   max-width: 100vw;
   height: clamp(1000px, calc(59.6vw + 776px), 1540px);
   pointer-events: none;
+  background: radial-gradient(#031eb7, #000000);
+
 }
 
 .heroBackgroundInner {
