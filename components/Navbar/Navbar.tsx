@@ -2,6 +2,7 @@ import { ConnectWallet, useAddress } from "@thirdweb-dev/react";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./Navbar.module.css";
+import { NFT_COLLECTION_ADDRESS } from "../../const/contractAddresses";
 
 /**
  * Navigation bar that shows up on all pages.
@@ -9,7 +10,7 @@ import styles from "./Navbar.module.css";
  */
 export function Navbar() {
   const address = useAddress();
-
+  const mintURI = `/${NFT_COLLECTION_ADDRESS}/mint`
   return (
     <div className={styles.navContainer}>
       <nav className={styles.nav}>
@@ -29,6 +30,9 @@ export function Navbar() {
             </Link>
             <Link href="/sell" className={styles.link}>
               Sell
+            </Link>
+            <Link href={mintURI} className={styles.link}>
+              Mint NFT
             </Link>
           </div>
         </div>
