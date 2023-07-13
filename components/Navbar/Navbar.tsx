@@ -10,7 +10,7 @@ import { NFT_COLLECTION_ADDRESS } from "../../const/contractAddresses";
  */
 export function Navbar() {
   const address = useAddress();
-  const mintURI = `/${NFT_COLLECTION_ADDRESS}/mint`
+  const mintURI = `/token/${NFT_COLLECTION_ADDRESS}/mint`
   return (
     <div className={styles.navContainer}>
       <nav className={styles.nav}>
