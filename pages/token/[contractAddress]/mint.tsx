@@ -70,8 +70,8 @@ export default function Mint() {
                                     address ? (
                                         !isClaimIneleigibilityLoading ? (
                                             claimIneleigibility?.length! > 0 ? (
-                                                claimIneleigibility?.map((reason) => (
-                                                    <p>{reason}</p>
+                                                claimIneleigibility?.map((index, reason) => (
+                                                    <p key={index}>{reason}</p>
                                                 ))
                                             ) : (
                                                 <div>
